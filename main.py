@@ -1,7 +1,7 @@
 import os
 import time
 
-from lib import TicTac,winPos, circular_list
+from lib import TicTac, winPos, checkTie, circular_list
 
 tt = TicTac()
 
@@ -48,6 +48,14 @@ while True:
 		time.sleep(2)
 		os.system("clear")
 		continue
+
+	elif checkTie(tt.board, player_1, player_2):
+		tt = TicTac()
+		print("M A T C H  T I E! ! !")
+		time.sleep(2)
+		os.system("clear")
+		continue
+
 	else:
 		time.sleep(1)
 		os.system("clear")
