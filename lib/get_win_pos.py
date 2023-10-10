@@ -21,8 +21,10 @@ def winPos():
 	pos.append(win)
 	
 	win = []
+	tmp = 0
 	for i in reversed(range(3)):
-		cell = (i, i)
+		cell = (i, tmp)
+		tmp += 1
 		win.append(cell)
 	pos.append(win)
 	
