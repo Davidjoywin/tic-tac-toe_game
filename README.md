@@ -8,4 +8,4 @@
 	
 	or
 
-	-exit
+	- exit
