@@ -1,3 +1,4 @@
+from .score import score
 from .tt_toe import TicTac
 from .check_tie import checkTie
 from .get_win_pos import winPos

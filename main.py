@@ -1,7 +1,9 @@
 import os
 import time
 
+from lib import score as scoreStorage
 from lib import TicTac, winPos, checkTie, circular_list
+
 
 tt = TicTac()
 
@@ -35,6 +37,7 @@ while True:
 
 	play = input(f"{player} - ")
 	if play.lower().strip() == 'exit' or play.lower().strip() == 'quit':
+		scoreStorage(score)
 		print("Y O U  E N D E D  T H E  G A M E!!!")
 		break
 	if play in [str(i) for i in range(1, 10)]:
@@ -44,7 +47,7 @@ while True:
 		score[player] += 1
 
 		tt = TicTac()
-		print("N E X T  GAME S T A R T  S O O N ! ! !")
+		print("N E X T  G A M E  S T A R T  S O O N ! ! !")
 		time.sleep(2)
 		os.system("clear")
 		continue
